@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Chitter</title>
+  </head>
+  <h1>Chitter</h1>
+  <body>
+    <div id="signin">
+      <a id="sign-up-link" href="/signup/new" >Sign Up</a>
+      <a id="sign-in-link" href="/signin/new" >Sign In</a>
+    </div>
+    <div id="cheeps">
+
+      <% cheeps.forEach((cheep, index) => { %>
+        <p><span id="cheep-<%= index %>"><%= cheep.text %></span></p>
+        <p><span id="cheep-<%= index %>"><%= cheep.createdAt %></span></p>
+        <p><span id="cheep-<%= index %>"><%= cheep.username %></span></p>
+        <% }) %>
+
+    </div>
+
+
+
+  </body>
+</html>
