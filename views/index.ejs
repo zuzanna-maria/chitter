@@ -12,10 +12,11 @@
     </div>
     <div id="cheeps">
 
-      <% cheeps.forEach((cheep, index) => { %>
+      <% cheeps.reverse().forEach((cheep, index) => { %>
         <p><span id="cheep-<%= index %>"><%= cheep.text %></span></p>
         <p><span id="cheep-<%= index %>"><%= cheep.createdAt %></span></p>
         <p><span id="cheep-<%= index %>"><%= cheep.username %></span></p>
+        <p><span id="cheep-<%= index %>"><%= cheep.name %></span></p>
         <% }) %>
 
     </div>

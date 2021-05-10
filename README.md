@@ -1,67 +1,28 @@
-Chitter Challenge
+Chitter
 =================
 
-* Feel free to use Google, your notes, books, etc. but work on your own
-* If you refer to the solution of another coach or trainee, please put a link to that in your README
-* If you have a partial solution, **still check in a partial solution**
-* You must submit https://airtable.com/shrUGm2T8TYCFAmjNa your work by 9:30am Monday morning
+- This app allows you to make posts (cheeps) and see posts made by others.
+- Anyone can view posts made by others, but in order to post one yourself, you need to be signed in.
+- You can sign up for an account using an email, name, username and password.
 
-Challenge:
+
+To install and run this app, clone this repository locally and run the following commands:
 -------
 
-As usual please start by forking this repo.
+```
+npm install
+postgres -D /usr/local/var/postgres (this command starts the postgres server on Mac if it was installed with Homebrew - if your OS is different, please refer to commands specific to it)
+npx sequelize-cli db:migrate
+node app.js
 
-We are going to write a small twitter clone that will allow users to post messages to a public wall.
+```
 
-Good luck and let the chitter begin!
 
-Features:
+To run tests:
 -------
 
-### Standard Acceptance Criteria
 ```
-As a trainee software engineer
-So that I can let people know what I am doing  
-I want to post a message (peep) to chitter
+NODE_ENV=test npx sequelize-cli db:migrate
+NODE_ENV=test npx cypress open
 
-As a trainee
-So that I can see what others are saying  
-I want to see all peeps in reverse chronological order
-
-As a trainee
-So that I can better appreciate the context of a peep
-I want to see the time at which it was made
-
-As a trainee
-So that I can post messages on Chitter as me
-I want to sign up for Chitter
-
-As a trainee
-So that only I can post messages on Chitter as me
-I want to log in to Chitter
-
-As a trainee
-So that I can avoid others posting messages on Chitter as me
-I want to log out of Chitter
-```
-
-Additional requirements:
-------
-
-* You don't have to be logged in to see the peeps.
-* Trainee software engineers sign up to chitter with their email, password, name and a username (e.g. ewithers@digitalfutures.com, password123, Edward Withers, dearshrewdwit).
-* The username and email are unique.
-* Peeps (posts to chitter) have the name of the trainee and their user handle.
-* Your README should indicate the technologies used, and give instructions on how to install and run the tests.
-
-### Extended Acceptance Criteria
-
-```
-As a trainee
-So that I can stay constantly tapped in to the shouty box of Chitter
-I want to receive an email if I am tagged in a Peep
-
-As a trainee
-In order to start a conversation as a DFA trainee Software Engineer
-I want to reply to a peep from another trainee.
 ```

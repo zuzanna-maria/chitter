@@ -3,9 +3,9 @@
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     return Promise.all([
-      queryInterface.changeColumn(
+      queryInterface.addColumn(
         'Cheeps',
-        'userId',
+        'username',
         {
           type: Sequelize.STRING,
 

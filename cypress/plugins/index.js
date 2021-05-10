@@ -18,7 +18,6 @@
 // eslint-disable-next-line no-unused-vars
 const truncateTables = require('../../db-reset.js')
 const seedDatabase = require('../../db-seed.js')
-const bookmarksWithTags = require('../../db-create-bookmarks-with-tags.js')
 const seedUser = require('../../user-seed.js')
 const truncateUsers = require('../../user-reset.js')
 

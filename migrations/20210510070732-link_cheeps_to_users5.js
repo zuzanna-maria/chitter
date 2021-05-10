@@ -4,8 +4,8 @@ module.exports = {
   up: async (queryInterface, Sequelize) => {
     return Promise.all([
       queryInterface.changeColumn(
-        'Users', // table name
-        'email', // new field name
+        'Users',
+        'email',
         {type: Sequelize.STRING,
           isEmail: true,
           allowNull: false,
@@ -17,11 +17,6 @@ module.exports = {
   },
 
   down: async (queryInterface, Sequelize) => {
-    /**
-     * Add reverting commands here.
-     *
-     * Example:
-     * await queryInterface.dropTable('users');
-     */
+
   }
 };
