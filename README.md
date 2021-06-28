@@ -1,12 +1,10 @@
-Chitter
-=================
 
 - This app allows you to make posts (cheeps) and see posts made by others.
 - Anyone can view posts made by others, but in order to post one yourself, you need to be signed in.
 - You can sign up for an account using an email, name, username and password.
 
 
-To install and run this app, clone this repository locally and run the following commands:
+***To run project***
 -------
 
 ```
